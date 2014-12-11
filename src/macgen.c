@@ -89,10 +89,9 @@ char *generate_mac(char *buffer, size_t buffer_size, const int local_addr, const
 	}
 	
 	int n = snprintf(buffer, buffer_size, fmt_mac[format_addr], mac[0], mac[1], mac[2], mac[3], mac[4], mac[5], mac[6], mac[7], mac[8], mac[9], mac[10], mac[11]);
-    assert(0 <= n && (unsigned) n < buffer_size);
+	assert(0 <= n && (unsigned) n < buffer_size);
 	free(mac);
-    return buffer;
-	//return "";
+	return buffer;
 }
 
 int main(int argc, char **argv)
